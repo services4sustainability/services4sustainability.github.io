@@ -1,12 +1,12 @@
 title: Services for Sustainability
-url: "https://teal-worm.cloudvent.net"
+url: "https://services4sustainability.github.io"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
 
 # Default description in social shares for the jekyll-seo-tag gem
-description: Jekyll template with example content for a web agency.
+description: A Belgium-based company focused on services for sustainability for companies in Belgium.
 
 # Author details for the jekyll-seo-tag gem
 author:
@@ -20,7 +20,7 @@ social:
   links:
     - https://github.com/CloudCannon/urban-jekyll-template
 
-timezone: Etc/UTC
+timezone: Europe/Brussels
 
 collections:
   staff_members:
