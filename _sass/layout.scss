@@ -14,7 +14,7 @@
 }
 
 header {
-	color: #fff;
+	color: $brand-color;
 	padding: 20px 0;
 	position: absolute;
 	top: 0;
@@ -22,7 +22,7 @@ header {
 	width: 100%;
 
 	a {
-		color: $brand-color;
+		color: #DDD;
 		text-decoration: none;
 		z-index: 1;
 		position: relative;
