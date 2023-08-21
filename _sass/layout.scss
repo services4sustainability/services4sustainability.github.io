@@ -22,7 +22,7 @@ header {
 	width: 100%;
 
 	a {
-		color: #FF0000;
+		color: #fff;
 		text-decoration: none;
 		z-index: 1;
 		position: relative;
@@ -30,6 +30,9 @@ header {
 		&:hover {
 			text-decoration: none;
 		}
+	}
+	a.link {
+		color: $brand-color;
 	}
 
 	.company-name {
