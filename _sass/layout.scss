@@ -22,7 +22,7 @@ header {
 	width: 100%;
 
 	a {
-		color: #fff;
+		color: $brand-color;
 		text-decoration: none;
 		z-index: 1;
 		position: relative;
@@ -93,14 +93,14 @@ section {
 			color: #fff;
 		}
 
-		a:not(.button) {
-			color: #ffffff;
-			font-style: italic;
-		}
 	}
 
 	&.alternate {
 		background: #eee;
+		a:not(.button) {
+			color: #ffffff;
+			font-style: italic;
+		}
 	}
 }
 
