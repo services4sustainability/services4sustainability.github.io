@@ -1,14 +1,13 @@
 ---
-title: Portfolio
-heading: Our Work
-subtitle: See some of our proud customers with exemplary results.
+title: Veelgestelde vragen
+heading: Veelgestelde vragen
+subtitle: Hieronder beantwoorden we een aantal vragen die ons vaak gesteld worden. Neem gerust contact op indien uw vraag er niet tussen staat,
 ---
 
-<section class="diagonal patterned">
+<section class="alternate">
 	<div class="container">
-	    <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_clients/" class="btn"><strong>&#9998;</strong> Manage Clients</a></p>
 		<ul class="image-grid">
-			{% for client in site.clients %}
+			{% for question in site.clients %}
 				<li>
 					<a href="{{ site.baseurl }}{{ client.url }}">
 						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
