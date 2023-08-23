@@ -8,9 +8,3 @@
       link: /over/
     - name: Contact
       link: /contact/
-- title: Social
-  links:
-    - name: LinkedIn
-      link: https://nz.linkedin.com/company/cloud-cannon
-      social_icon: LinkedIn
-      new_window: true
