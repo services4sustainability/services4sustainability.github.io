@@ -105,6 +105,10 @@ section {
 			max-width: 100%;
 			color: #000;
 		}
+
+		li {
+			font-size: 5em;
+		}
 	}
 }
 
@@ -157,8 +161,7 @@ section {
 .aligned-top {
 	align-items: flex-start;
     div {
-        display: inline-block;
-		text-align: left;
+		text-align: center;
     }
 }
 
