@@ -31,6 +31,7 @@ header {
 			text-decoration: none;
 		}
 	}
+
 	a.link {
 		color: $brand-color;
 	}
@@ -46,15 +47,15 @@ header {
 	position: relative;
 }
 
-.screenshot{
+.screenshot {
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	box-shadow: 0 1px 0 #ccc,0 1px 1px #eee;
+	box-shadow: 0 1px 0 #ccc, 0 1px 1px #eee;
 	border-radius: 2px;
 	padding: 20px 0 0;
 	background: url($screenshot-buttons) 4px 4px no-repeat #DDD;
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -68,7 +69,7 @@ section {
 		-ms-transform: skewY(-$section-rotation);
 		transform: skewY(-$section-rotation);
 
-		> div {
+		>div {
 			-webkit-transform: skewY($section-rotation);
 			-moz-transform: skewY($section-rotation);
 			-ms-transform: skewY($section-rotation);
@@ -83,7 +84,8 @@ section {
 		margin-top: -100px;
 		padding-top: 250px;
 
-		h2, p {
+		h2,
+		p {
 			max-width: 90%;
 		}
 
@@ -100,6 +102,21 @@ section {
 
 	&.alternate {
 		background: #eee;
+
+		h2,
+		p {
+			max-width: 90%;
+		}
+
+		h2 {
+			font-size: 3.5rem;
+		}
+
+		p {
+			font-size: 1.8rem;
+			color: #fff;
+		}
+
 		a:not(.button) {
 			color: #ffffff;
 			font-style: italic;
@@ -137,16 +154,16 @@ section {
 	flex-flow: wrap;
 	align-items: center;
 
-	> div {
+	>div {
 		flex: 1 0 100%;
 	}
 
 	@media #{$mid-point} {
-		> div {
+		>div {
 			flex: 1;
 		}
 
-		> div + div {
+		>div+div {
 			padding-left: 20px;
 			margin: 0;
 		}
@@ -189,7 +206,7 @@ section {
 			min-width: 100%;
 		}
 
-		> a:hover {
+		>a:hover {
 			opacity: 0.9;
 		}
 	}
