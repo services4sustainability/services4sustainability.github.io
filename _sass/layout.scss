@@ -125,11 +125,6 @@ section {
 			color: #000;
 		}
 
-		a:not(.button) {
-			color: $brand-color;
-			font-style: italic;
-		}
-
 		li {
 			list-style: none;
 		}
@@ -144,19 +139,19 @@ section {
 	text-decoration: none;
 	cursor: pointer;
 	margin: 20px 0 0 0;
-	border: 1px solid #fff;
-	background: #fff;
+	border: 1px solid $brand-color;
+	background: $brand-color;
 	text-decoration: none !important;
 
 	&:hover {
 		background: rgba(255, 255, 255, 0.3);
-		color: #fff;
+		color: $brand-color;
 	}
 
 	&:active {
 		opacity: 1;
 		background: rgba(255, 255, 255, 0.1);
-		color: #fff;
+		color: $brand-color;
 		transform: translateY(1px);
 	}
 }
