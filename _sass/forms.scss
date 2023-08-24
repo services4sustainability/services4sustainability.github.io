@@ -5,18 +5,18 @@ input[type=submit] {
 	border-radius: 3px;
 	transition: 0.2s ease-in-out;
 	border: 1px solid $brand-color;
-	background: #fff;
+	background: #e3e3e3;
 	cursor: pointer;
 }
 
 input[type=submit]:hover {
-	background: rgba(255, 255, 255, 0.3);
+	background: #fff;
 	color: $brand-color;
 }
 
 input[type=submit]:active {
 	opacity: 1;
-	background: rgba(255, 255, 255, 0.1);
+	background: #fff;
 	color: $brand-color;
 	transform: translateY(1px);
 }
