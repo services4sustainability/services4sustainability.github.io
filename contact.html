@@ -81,23 +81,37 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 		});
 	}
 
-	var form = document.getElementById("contactForm");
-	async function handleSubmit(event) {
-		event.preventDefault();
-		var data = new FormData(event.target);
-		alert(JSON.stringify(form))
-		fetch(event.target.action, {
-			method: form.method, body: form, headers: { 'Accept': 'application/json' }
-		}).then(response => {
-			if (response.ok) { window.location.href = "{{ site.baseurl }}/contact-success/"; }
-			else {
-				response.json().then(data => {
-					if (Object.hasOwn(data, 'errors')) { alert(data["errors"].map(error => error["message"]).join(", ")) }
-					else { alert("Oops! There was a problem submitting your form") }
-				})
-			}
-		}).catch(error => { alert("Oops! There was a problem submitting your form") });
-	} form.addEventListener("submit", handleSubmit)
+	$("#contactForm").submit(function(e) {
+	    e.preventDefault(); // avoid to execute the actual submit of the form.
+	    var form = $(this);
+	    var actionUrl = form.attr('action');
+	    $.ajax({
+	        type: "POST",
+	        url: actionUrl,
+	        data: form.serialize(), // serializes the form's elements.
+	        success: function(data)
+	        {
+	          alert(data); // show response from the php script.
+	        }
+	    });
+	});
+	//var form = document.getElementById("contactForm");
+	//async function handleSubmit(event) {
+	//	event.preventDefault();
+	//	var data = new FormData(event.target);
+	//	alert(JSON.stringify(form))
+	//	fetch(event.target.action, {
+	//		method: form.method, body: form, headers: { 'Accept': 'application/json' }
+	//	}).then(response => {
+	//		if (response.ok) { window.location.href = "{{ site.baseurl }}/contact-success/"; }
+	//		else {
+	//			response.json().then(data => {
+	//				if (Object.hasOwn(data, 'errors')) { alert(data["errors"].map(error => error["message"]).join(", ")) }
+	//				else { alert("Oops! There was a problem submitting your form") }
+	//			})
+	//		}
+	//	}).catch(error => { alert("Oops! There was a problem submitting your form") });
+	//} form.addEventListener("submit", handleSubmit)
 </script>
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
