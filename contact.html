@@ -86,15 +86,19 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 	    var form = $(this);
 	    var actionUrl = form.attr('action');
 		alert(actionUrl)
+		alert(form.email)
 	    $.ajax({
-	        type: "POST",
+	        method: "POST",
 	        url: actionUrl,
-	        data: form.serialize(), // serializes the form's elements.
+			dataType: 'json',
+	        data: {
+				email: form.email,
+				message: form.message
+			},
 	        success: function(data)
 	        {
 	          alert(data); // show response from the php script.
 	        },
-			dataType: 'json'
 	    });
 	});
 	//var form = document.getElementById("contactForm");
