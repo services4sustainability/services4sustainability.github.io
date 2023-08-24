@@ -156,6 +156,10 @@ section {
 
 .aligned-top {
 	align-items: flex-start;
+    ul {
+        display: inline-block;
+		text-align: left;
+    }
 }
 
 .image-grid {
