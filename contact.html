@@ -11,8 +11,8 @@ map:
 
 <section class="diagonal">
 	<div class="container">
-		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-			<input type="hidden" name="_to" value="info@s4s.be" />
+		<form action="mailto:{{ site.data.company.contact_email_address }}" method="post" class="contact-form">
+			<input type="hidden" name="_to" value="{{ site.data.company.contact_email_address }}" />
 			<input type="text" name="_gotcha" style="display: none;" />
 
 			<div class="halves">
@@ -31,10 +31,10 @@ map:
 			<input type="email" name="email" id="email" placeholder="jan@gmail.be" required />
 
 			<label for="email">Telefoonnummer</label>
-			<input type="email" name="nr" id="nr" placeholder="0412 34 56 78" required />
+			<input type="tel" name="nr" id="nr" placeholder="0412 34 56 78" required />
 
 			<label for="message">Bericht</label>
-			<textarea name="message" id="message" placeholder="Hallo..."></textarea>
+			<textarea name="message" id="message" placeholder="Hallo..." required></textarea>
 
 			<input type="submit" value="Verstuur" />
 		</form>
