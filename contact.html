@@ -85,6 +85,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 	    e.preventDefault(); // avoid to execute the actual submit of the form.
 	    var form = $(this);
 	    var actionUrl = form.attr('action');
+		alert(actionUrl)
 	    $.ajax({
 	        type: "POST",
 	        url: actionUrl,
