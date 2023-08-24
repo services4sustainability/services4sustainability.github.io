@@ -64,60 +64,53 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 			panControl: false,
 			disableDefaultUI: true,
 			styles: [{ "featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{ "color": "#f7f1df" }] }, { "featureType": "landscape.natural", "elementType": "geometry", "stylers": [{ "color": "#d0e3b4" }] }, { "featureType": "landscape.natural.terrain", "elementType": "geometry", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.business", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.medical", "elementType": "geometry", "stylers": [{ "color": "#fbd3da" }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#bde6ab" }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffe15f" }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#efd151" }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [{ "color": "black" }] }, { "featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{ "color": "#cfb2db" }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#a2daf2" }] }],
-			zoom: {{ site.data.company.zoom }},
-			maxZoom: {{ site.data.company.zoom }},
-			minZoom: {{ site.data.company.zoom }},
-			center: new google.maps.LatLng({{ site.data.company.latitude }}, {{ site.data.company.longitude }}),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			zoom: {{ site.data.company.zoom }
+	},
+	maxZoom: { { site.data.company.zoom } },
+	minZoom: { { site.data.company.zoom } },
+	center: new google.maps.LatLng({{ site.data.company.latitude }}, {{ site.data.company.longitude }}),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-		map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-		marker = new google.maps.Marker({
-			map: map,
-			position: new google.maps.LatLng({{ site.data.company.latitude }}, {{ site.data.company.longitude }})
+	map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+	marker = new google.maps.Marker({
+		map: map,
+		position: new google.maps.LatLng({{ site.data.company.latitude }}, {{ site.data.company.longitude }})
 		});
 
-		google.maps.event.addDomListener(window, "resize", function () {
-			map.setCenter(myOptions.center);
-		});
+	google.maps.event.addDomListener(window, "resize", function () {
+		map.setCenter(myOptions.center);
+	});
 	}
 
-	$("#contactForm").submit(function(e) {
-	    e.preventDefault(); // avoid to execute the actual submit of the form.
-	    var form = $(this);
-	    var actionUrl = form.attr('action');
-		alert(actionUrl)
-		alert(form.email)
-	    $.ajax({
-	        method: "POST",
-	        url: actionUrl,
-			dataType: 'json',
-	        data: {
-				email: form.email,
-				message: form.message
-			},
-	        success: function(data)
-	        {
-	          alert(data); // show response from the php script.
-	        },
-	    });
-	});
-	//var form = document.getElementById("contactForm");
-	//async function handleSubmit(event) {
-	//	event.preventDefault();
-	//	var data = new FormData(event.target);
-	//	alert(JSON.stringify(form))
-	//	fetch(event.target.action, {
-	//		method: form.method, body: form, headers: { 'Accept': 'application/json' }
-	//	}).then(response => {
-	//		if (response.ok) { window.location.href = "{{ site.baseurl }}/contact-success/"; }
-	//		else {
-	//			response.json().then(data => {
-	//				if (Object.hasOwn(data, 'errors')) { alert(data["errors"].map(error => error["message"]).join(", ")) }
-	//				else { alert("Oops! There was a problem submitting your form") }
-	//			})
-	//		}
-	//	}).catch(error => { alert("Oops! There was a problem submitting your form") });
-	//} form.addEventListener("submit", handleSubmit)
+
+	var form = document.getElementById("contactForm");
+	async function handleSubmit(event) {
+		event.preventDefault();
+		var data = new FormData(event.target);
+		fetch(event.target.action, {
+			method: form.method,
+			body: data,
+			headers: {
+				'Accept': 'application/json'
+			}
+		}).then(response => {
+			if (response.ok) {
+				alert("success")
+				form.reset()
+			} else {
+				response.json().then(data => {
+					if (Object.hasOwn(data, 'errors')) {
+						alert(data["errors"].map(error => error["message"]).join(", "))
+					} else {
+						alert("Oops! There was a problem submitting your form")
+					}
+				})
+			}
+		}).catch(error => {
+			alert("Oops! There was a problem submitting your form")
+		});
+	}
+	form.addEventListener("submit", handleSubmit)
 </script>
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
