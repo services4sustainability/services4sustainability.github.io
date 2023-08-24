@@ -6,11 +6,11 @@
 }
 
 .text-container {
-	max-width: 1000px;
+	max-width: 1200px;
 }
 
 .container {
-	max-width: 1000px;
+	max-width: 1200px;
 }
 
 header {
@@ -140,7 +140,7 @@ section {
 	cursor: pointer;
 	margin: 20px 0 0 0;
 	border: 1px solid $brand-color;
-	background: $brand-color;
+	background: #fff;
 	text-decoration: none !important;
 
 	&:hover {
