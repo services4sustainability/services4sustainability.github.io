@@ -37,12 +37,12 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 	<div id="gmap_canvas"></div>
 </section>
 
-<section class="grey diagonal">
+<section class="white diagonal">
 	<div class="container halves aligned-top">
 		<div>
 			<h3>Adres</h3>
 			<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{
-					page.map.address | replace: ", ", ", <br>" }}</a></address>
+					site.data.company.address | replace: ", ", ", <br>" }}</a></address>
 		</div>
 		<div>
 			<h3>Tel.</h3>
@@ -85,9 +85,9 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 	async function handleSubmit(event) {
 		event.preventDefault();
 		var data = new FormData(event.target);
-		alert(JSON.stringify(event))
+		alert(JSON.stringify(form))
 		fetch(event.target.action, {
-			method: form.method, body: data, headers: { 'Accept': 'application/json' }
+			method: form.method, body: form, headers: { 'Accept': 'application/json' }
 		}).then(response => {
 			if (response.ok) { window.location.href = "{{ site.baseurl }}/contact-success/"; }
 			else {
