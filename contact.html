@@ -38,7 +38,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 </section>
 
 <section class="white diagonal">
-	<div class="container aligned-top">
+	<div class="container halves aligned-top">
 		<div>
 			<h3>Adres</h3>
 			<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{
@@ -93,19 +93,19 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 			}
 		}).then(response => {
 			if (response.ok) {
-				alert("success")
-				form.reset()
+				window.location.href = "{{ site.baseurl }}/contact-success/";
 			} else {
 				response.json().then(data => {
 					if (Object.hasOwn(data, 'errors')) {
-						alert(data["errors"].map(error => error["message"]).join(", "))
+						console.log(data["errors"].map(error => error["message"]).join(", "))
 					} else {
-						alert("Oops! There was a problem submitting your form")
+						console.log("Oops! There was a problem submitting your form")
 					}
+					window.location.href = "{{ site.baseurl }}/contact-error/";
 				})
 			}
 		}).catch(error => {
-			alert("Oops! There was a problem submitting your form")
+			console.log("Oops! There was a problem submitting your form")
 		});
 	}
 	form.addEventListener("submit", handleSubmit)
