@@ -89,7 +89,7 @@ nav {
 		color: $brand-color;
 
 		@media #{$mid-point} {
-			border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+			border-bottom: 2px solid $brand-color;
 			display: block;
 			padding: 10px;
 		}
@@ -97,7 +97,7 @@ nav {
 
 	@media #{$mid-point} {
 		a.highlight {
-			border: 1px #ccc solid;
+			border: 1px $brand-color solid;
 			border-radius: 5px;
 
 			&:hover {
