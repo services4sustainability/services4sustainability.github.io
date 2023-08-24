@@ -62,7 +62,7 @@ map:
 </section>
 
 <script type="text/javascript">
-	window.mapData = JSON.stringify(page.map);
+	window.mapData = {{ page.map | jsonify }};
 
 	function initMap() {
 		var myOptions = {
