@@ -103,8 +103,12 @@ section {
 			color: #fff;
 		}
 
-		li {
-			margin: 10px 0;
+		ol.li {
+			margin: 20px 0;
+			font-size:100px
+		}
+		ol.li.a {
+			color: #fff;
 		}
 
 	}
@@ -135,9 +139,12 @@ section {
 			color: #000;
 		}
 
-		li {
-			margin: 10px 0;
-			font-size:30px
+		ol.li {
+			margin: 20px 0;
+			font-size:100px
+		}
+		ol.li.a {
+			color: #000;
 		}
 	}
 }
