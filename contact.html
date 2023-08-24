@@ -11,7 +11,7 @@ map:
 
 <section class="diagonal">
 	<div class="container">
-		<form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form">
+		<form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form" id="contactForm>
 			<div class="halves">
 				<div>
 					<label for="name">Voornaam</label>
@@ -86,7 +86,7 @@ map:
 		});
 	}
 
-	$("#FormID").submit(function(e) {
+	$("#contactForm").submit(function(e) {
     e.preventDefault(); // avoid to execute the actual submit of the form.
     var form = $(this);
     var url = form.attr('action');
