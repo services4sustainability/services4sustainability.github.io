@@ -11,10 +11,7 @@ map:
 
 <section class="diagonal">
 	<div class="container">
-		<form action="mailto:{{ site.data.company.contact_email_address }}" method="post" class="contact-form">
-			<input type="hidden" name="_to" value="{{ site.data.company.contact_email_address }}" />
-			<input type="text" name="_gotcha" style="display: none;" />
-
+		<form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form">
 			<div class="halves">
 				<div>
 					<label for="name">Voornaam</label>
@@ -36,7 +33,7 @@ map:
 			<label for="message">Bericht</label>
 			<textarea name="message" id="message" placeholder="Hallo..." required></textarea>
 
-			<input type="submit" value="Verstuur" />
+			<input type="submit" onclick="window.location.href = '{{ site.baseurl }}/contact-success/';" value="Verstuur" />
 		</form>
 	</div>
 </section>
