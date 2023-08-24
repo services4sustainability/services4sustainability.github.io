@@ -85,7 +85,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 	async function handleSubmit(event) {
 		event.preventDefault();
 		var data = new FormData(event.target);
-		alert(JSON.stringify(data))
+		alert(JSON.stringify(event))
 		fetch(event.target.action, {
 			method: form.method, body: data, headers: { 'Accept': 'application/json' }
 		}).then(response => {
