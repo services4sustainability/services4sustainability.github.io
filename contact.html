@@ -62,7 +62,7 @@ zoom: 13
 </section>
 
 <script type="text/javascript">
-	window.mapData = {{ page.map | jsonify }};
+	window.mapData = "{{ page.map | jsonify }}";
 
 	function initMap() {
 		var myOptions = {
@@ -99,11 +99,11 @@ zoom: 13
 			if (response.ok) { window.location.href = "{{ site.baseurl }}/contact-success/"; }
 			else {
 				response.json().then(data => {
-					if (Object.hasOwn(data, 'errors')) { status.innerHTML = data["errors"].map(error => error["message"]).join(", ") }
-					else { status.innerHTML = "Oops! There was a problem submitting your form" }
+					if (Object.hasOwn(data, 'errors')) { alert(data["errors"].map(error => error["message"]).join(", ")) }
+					else { alert("Oops! There was a problem submitting your form") }
 				})
 			}
-		}).catch(error => { status.innerHTML = "Oops! There was a problem submitting your form" });
+		}).catch(error => { alert("Oops! There was a problem submitting your form") });
 	} form.addEventListener("submit", handleSubmit)
 </script>
 <script async defer
