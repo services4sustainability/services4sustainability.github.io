@@ -1,25 +1,16 @@
 ---
 title: Veelgestelde vragen
 heading: Veelgestelde vragen
-subtitle: Hieronder beantwoorden we een aantal vragen die ons vaak gesteld worden. Neem gerust contact op indien uw vraag er niet tussen staat,
+subtitle: Hieronder beantwoorden we een aantal vragen die ons vaak gesteld worden. Neem gerust contact op indien uw vraag er niet tussen staat.
 ---
 
-<section class="alternate">
+<section class="alternate diagonal">
 	<div class="container">
 		<ul class="image-grid">
-			{% for question in site.clients %}
-				<li>
-					<a href="{{ site.baseurl }}{{ client.url }}">
-						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
-						<div class="details">
-							<div class="name">{{ client.name }}</div>
-							<div class="position">{{ client.subtitle }}</div>
-						</div>
-					</a>
-				</li>
-			{% endfor %}
-			<li class="filler"></li>
-			<li class="filler"></li>
+			<li>
+				<h2>Wat is de prijs van een asbestattest?</h2>
+				<p class="editable">Dit is afhankelijk van het type woning. Voor een appartement bedraagt de kostprijs €650 (inclusief BTW). Voor een woning tot 250 m² bedraagt de kostprijs €750 (inclusief BTW).</p>
+			</li>
 		</ul>
 	</div>
 </section>

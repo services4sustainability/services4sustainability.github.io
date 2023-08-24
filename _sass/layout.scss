@@ -101,7 +101,11 @@ section {
 	}
 
 	&.alternate {
+		color: #000;
 		background: #eee;
+		text-align: left;
+		margin-top: -100px;
+		padding-top: 250px;
 
 		h2,
 		p {
