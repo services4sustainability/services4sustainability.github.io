@@ -41,24 +41,58 @@ footer {
 	}
 }
 
-.footer-links {
+.footer-menu {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	flex: 1 0 180px;
     text-align: center;
 
-    .certificates {
-        display: inline-block;
-		text-align: left;
-		margin: 0 80px 0 80px;
-    }
-
-    .menu {
+    ul {
         display: inline-block;
 		text-align: left;
 		margin: 0;
 		padding: 0;
+    }
+
+	li {
+		list-style: none;
+		margin: 15px 50px;
+
+		a {
+			svg {
+				fill: #999;
+				margin-right: 10px;
+				transition: fill 0.2s ease;
+				vertical-align: middle;
+				position: relative;
+				top: -2px;
+				width: 22px;
+				height: 22px;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
+
+.footer-cert {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	flex: 1 0 180px;
+    text-align: center;
+
+    ul {
+        display: inline-block;
+		text-align: left;
+		margin: 0 80px 0 80px;
     }
 
 	li {
