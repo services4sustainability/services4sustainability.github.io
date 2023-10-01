@@ -3,93 +3,91 @@
 <html lang="nl">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	{% seo %}
-	{% feed_meta %}
+  {% seo %}
+  {% feed_meta %}
 
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 
-	<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
 
-	{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
-	<script>
-		window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
-		ga('create', '{{ site.google_analytics_key }}', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<script async src='https://www.google-analytics.com/analytics.js'></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	{% endif %}
+  {% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', '{{ site.google_analytics_key }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  {% endif %}
 </head>
 
 <body>
-	<header>
-		<div class="container">
-			<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg"
-						alt="Urban" width="150"></a></h1>
-			{% include navigation.html %}
-		</div>
-	</header>
-	{{ content }}
+  <header>
+    <div class="container">
+      <h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Urban"
+            width="150"></a></h1>
+      {% include navigation.html %}
+    </div>
+  </header>
+  {{ content }}
 
-	<footer >
-		<div class="container">
-			<div class="footer-columns">
-				{% for column in site.data.footer %}
-				<ul class="footer-links">
-					<li>
-						<h2>{{ column.title }}</h2>
-					</li>
-					{% for link in column.links %}
-					<li>
-						<a {% if link.new_window %}target="_blank" {% endif %}
-							href="{% include relative-src.html src=link.link %}" {% if link.social_icon
-							%}class="{{ link.social_icon | slugify }}-icon" {% endif %}>
-							{% if link.social_icon %}
-							{% include social-icon.html icon=link.social_icon %}
-							{% endif %}
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        {% for column in site.data.footer %}
+        <ul class="footer-links">
+          <li>
+            <h2>{{ column.title }}</h2>
+          </li>
+          {% for link in column.links %}
+          <li>
+            <a {% if link.new_window %}target="_blank" {% endif %} href="{% include relative-src.html src=link.link %}"
+              {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon" {% endif %}>
+              {% if link.social_icon %}
+              {% include social-icon.html icon=link.social_icon %}
+              {% endif %}
 
-							{{ link.name }}
-						</a>
-					</li>
-					{% endfor %}
-				</ul>
-				{% endfor %}
+              {{ link.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
 
-				<ul class="footer-cert">
-					<li>
-						<h2>Certificaties</h2>
-					</li>
-					<li>
-						<a href="https://asbest-certificaat.be/" target="_blank"><img src="https://asbest-certificaat.be/wp-content/uploads/2022/10/cropped-Logo_SKH_M_Groen_SKH-SHR22_nl.png" width="150" style="margin-bottom: 40px;"></a>
-					</li>
-					<li>
-						<a href="https://ovam.vlaanderen.be/" target="_blank"><img src="https://ovam.vlaanderen.be/o/ovam-website-theme/assets/images/logo_be.png" width="150" style="margin-bottom: 40px;"></a> 
-					</li>
-				</ul>
+        <ul class="footer-cert">
+          <li>
+            <h2>Certificaties</h2>
+          </li>
+          <li>
+            <a href="https://asbest-certificaat.be/" target="_blank"><img
+                src="https://asbest-certificaat.be/wp-content/uploads/2022/10/cropped-Logo_SKH_M_Groen_SKH-SHR22_nl.png"
+                width="150" style="margin-bottom: 40px;"></a>
+          </li>
+        </ul>
 
-				<ul class="footer-links">
-						<img src="{{ site.baseurl }}/images/watermark_white.png" width="100%" style="margin-bottom: 40px;">
-				</ul>
-			</div>
-		</div>
+        <ul class="footer-links">
+          <img src="{{ site.baseurl }}/images/watermark_white.png" width="100%" style="margin-bottom: 40px;">
+        </ul>
+      </div>
+    </div>
 
-		<div class="legal-line">
-			<p class="container">
-				&copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
-			</p>
-		</div>
-	</footer>
-	<script>
-		document.getElementById("open-nav").onclick = function () {
-			document.body.classList.toggle("nav-open");
-			return false;
-		};
-	</script>
+    <div class="legal-line">
+      <p class="container">
+        &copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("open-nav").onclick = function () {
+      document.body.classList.toggle("nav-open");
+      return false;
+    };
+  </script>
 </body>
 
 </html>
