@@ -20,6 +20,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
                     <input type="text" name="last-name" id="last-name" placeholder="Achternaam" required />
                 </div>
             </div>
+            <br>
             <div class="halves">
                 <div>
                     <label for="name">E-mailadres</label>
@@ -37,10 +38,22 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <br>
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
             <div class="radio-options">
-                <label>Ik wens een asbsestattest voor een:</label>
+                <label>Ik wens een asbsestattest voor een:</label><br>
                 <label class="radio-inline"><input type="radio" name="optradio" checked>Appartement</label>
                 <label class="radio-inline"><input type="radio" name="optradio" checked>Woning</label>
             </div>
+            <br>
+
+            <div class="radio-options">
+                <label>Totale vloeroppervlakte:</label><br>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>0-250m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>250-350m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>350-500m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>meer dan
+                    500m<sup>2</sup></label>
+            </div>
+            <br>
+
             <div class="halves">
                 <div>
                     <label for="straat">Straat</label>
@@ -52,6 +65,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
                     <input type="nr" name="huisnr" id="huisnr" placeholder="1B" required />
                 </div>
             </div>
+            <br>
 
             <label for="message">Bericht</label>
             <textarea name="message" id="message" placeholder="Hallo..." required></textarea>
@@ -124,3 +138,13 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     }
     form.addEventListener("submit", handleSubmit)
 </script>
+<style>
+    div.radio-options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.radio-options label {
+        margin-right: 10px;
+    }
+</style>
