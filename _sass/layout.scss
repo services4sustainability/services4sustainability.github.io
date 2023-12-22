@@ -196,6 +196,26 @@ section {
 	}
 }
 
+.halvestop {
+	display: flex;
+	flex-flow: wrap;
+
+	>div {
+		flex: 1 0 100%;
+	}
+
+	@media #{$mid-point} {
+		>div {
+			flex: 1;
+		}
+
+		>div+div {
+			padding-left: 20px;
+			margin: 0;
+		}
+	}
+}
+
 .aligned-top {
 	align-items: flex-start;
 
