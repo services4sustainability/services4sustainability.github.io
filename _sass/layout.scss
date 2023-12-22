@@ -180,9 +180,13 @@ section {
 	flex-flow: wrap;
 	align-items: flex-start;
 
-	>div:not([type="radio"]) {
-		flex: 1 0 100%;
-	}
+    >div {
+        flex: 1 0 100%;
+    }
+
+    >div > input[type="radio"] {
+        flex: none;
+    }
 
 	@media #{$mid-point} {
 		>div {
