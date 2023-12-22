@@ -10,6 +10,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
             <b>GEGEVENS VAN DE OPDRACHTGEVER</b>
             <br>
+            <br>
 
             <div class="halves">
                 <div>
@@ -40,44 +41,45 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <br>
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
             <br>
+            <br>
 
             <div class="radio-options">
                 <label>Ik wens een asbsestattest voor een:</label><br>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Appartement</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Woning</label>
+                <label class="radio-inline"><input type="radio" name="voor" checked>Appartement</label>
+                <label class="radio-inline"><input type="radio" name="voor" checked>Woning</label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Totale vloeroppervlakte:</label><br>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>0-250m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>250-350m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>350-500m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>meer dan
+                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>0-250m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>250-350m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>350-500m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>meer dan
                     500m<sup>2</sup></label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Asbestattest voor:</label><br>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Verkoop / schenking / overdracht</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Codex welzijn op werk</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Vrijwillig</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Andere</label>
+                <label class="radio-inline"><input type="radio" name="doel" checked>Verkoop / schenking / overdracht</label>
+                <label class="radio-inline"><input type="radio" name="doel" checked>Codex welzijn op werk</label>
+                <label class="radio-inline"><input type="radio" name="doel" checked>Vrijwillig</label>
+                <label class="radio-inline"><input type="radio" name="doel" checked>Andere</label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Zijn er grondplannen van het pand?</label><br>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Ja</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Neen</label>
+                <label class="radio-inline"><input type="radio" name="plannen" checked>Ja</label>
+                <label class="radio-inline"><input type="radio" name="plannen" checked>Neen</label>
             </div>
             <br>
 
             <div class="radio-options">
-                <label>Zijn er bijgebouwen >50m<sup>2</sup></label><br>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Ja</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Neen</label>
+                <label>Zijn er bijgebouwen >50m<sup>2</sup>?</label><br>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen" checked>Ja</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen" checked>Neen</label>
             </div>
             <br>
             <textarea name="message" id="message" placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" required></textarea>
@@ -173,15 +175,9 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
   width: 50%; /* or any percentage or fixed value you want */
   text-align: center; /* for inner content alignment */
 }
-    .radio-options {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .radio-options .radio-inline {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-right: 10px;
 }
 </style>
