@@ -37,23 +37,13 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
             <div>
                 <label>Ik wens een asbsestattest voor een:</label>
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" checked>Appartement
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" checked>Woning
-                </label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Appartement</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Woning</label>
             </div>
-            <div class="halves">
-                <div>
-                    <label for="name">E-mailadres</label>
-                    <input type="email" name="email" id="email" placeholder="naam@gmail.be" required />
-                </div>
-
-                <div>
-                    <label for="name">Telefoonnummer</label>
-                    <input type="tel" name="nr" id="nr" placeholder="0412345678" required />
-                </div>
+            <div style="display: flex;">
+                <input type="text" name="address" placeholder="Straat" style="flex: 0.7;" required />
+                <input type="text" name="number" placeholder="Nummer" style="flex: 0.15;" required />
+                <input type="text" name="postbus" placeholder="Bus" style="flex: 0.15;" required />
             </div>
 
             <label for="message">Bericht</label>
