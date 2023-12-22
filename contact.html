@@ -31,36 +31,18 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
                     <input type="tel" name="nr" id="nr" placeholder="0412345678" required />
                 </div>
             </div>
-            
+
+            <br>
             <br>
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
             <div>
                 <label>Ik wens een asbsestattest voor een:</label>
-                <div class="radio-options">
-                    <div>
-                        <input type="radio" id="option1" name="appartement" value="Appartement">
-                        <label for="option1">Appartement</label><br>
-                    <div>
-                        <input type="radio" id="option2" name="woning" value="Woning">
-                        <label for="option2">Woning</label><br>
-                    </div>
-                    <div>
-                        <input type="radio" id="option3" name="kantoor/comruimte" value="Kantoor / Commerciele ruimte">
-                        <label for="option3">Kantoor / Commerciele ruimte"</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="option4" name="appartementsgebouw" value="Appartementsgebouw">
-                        <label for="option4">Appartementsgebouw</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="option5" name="gem_delen" value="Gemeenschappelijke delen">
-                        <label for="option5">Gemeenschappelijke delen"</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="option6" name="andere" value="Andere">
-                        <label for="option6">Andere"</label>
-                    </div>
-                </div>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>Appartement
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>Woning
+                </label>
             </div>
 
             <label for="message">Bericht</label>
@@ -135,19 +117,11 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     form.addEventListener("submit", handleSubmit)
 </script>
 <style>
-.center-div {
-  margin: auto;
-  margin-top: 20px;
-  width: 30%;
-  text-align: center; /* for inner content alignment */
-}
-.radio-options {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* adjust as needed */
-}
-
-.radio-options div {
-  margin-right: 10px; /* adjust as needed */
-}
+    .center-div {
+        margin: auto;
+        margin-top: 20px;
+        width: 30%;
+        text-align: center;
+        /* for inner content alignment */
+    }
 </style>
