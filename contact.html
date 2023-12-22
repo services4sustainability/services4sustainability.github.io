@@ -77,12 +77,12 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <br>
 
             <div class="radio-options">
-                <label>Zijn er bijgebouwen >50m<sup>2</sup>?</label><br>
+                <div><label>Zijn er bijgebouwen >50m<sup>2</sup>?</label></div>
                 <label class="radio-inline"><input type="radio" name="bijgebouwen" id="jaOption">Ja</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen">Neen</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen" id="neeOptioN">Neen</label>
             </div>
             <br>
-            <textarea name="message" id="message"
+            <textarea name="message" id="bijgebouwen_bericht"
                 placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" required></textarea>
             <br>
 
@@ -137,9 +137,14 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
     document.getElementById('jaOption').addEventListener('change', function () {
         if (this.checked) {
-            document.getElementById('message').style.display = 'block';
+            document.getElementById('bijgebouwen_bericht').style.display = 'block';
         } else {
-            document.getElementById('message').style.display = 'none';
+            document.getElementById('bijgebouwen_bericht').style.display = 'none';
+        }
+    });
+    document.getElementById('neeOption').addEventListener('change', function () {
+        if (this.checked) {
+            document.getElementById('bijgebouwen_bericht').style.display = 'none';
         }
     });
     window.onload = function () {
@@ -181,10 +186,8 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 <style>
     .center-div {
         margin: auto;
-        width: 50%;
-        /* or any percentage or fixed value you want */
+        width: 30%;
         text-align: center;
-        /* for inner content alignment */
     }
 
     .radio-options {
