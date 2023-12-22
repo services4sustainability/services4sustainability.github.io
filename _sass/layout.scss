@@ -197,23 +197,23 @@ section {
 }
 
 .halvestop {
-	display: flex;
-	flex-flow: wrap;
+    display: flex;
+    flex-flow: wrap;
 
-	>div {
-		flex: 1 0 100%;
-	}
+    >div {
+        flex: 1 0 50%; /* Change this value as needed */
+    }
 
-	@media #{$mid-point} {
-		>div {
-			flex: 1;
-		}
+    @media #{$mid-point} {
+        >div {
+            flex: 1;
+        }
 
-		>div+div {
-			padding-left: 20px;
-			margin: 0;
-		}
-	}
+        >div+div {
+            padding-left: 20px;
+            margin: 0;
+        }
+    }
 }
 
 .aligned-top {
