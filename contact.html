@@ -34,15 +34,16 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
             <br>
             <br>
+            <br>
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
-            <div>
+            <div class="radio-options">
                 <label>Ik wens een asbsestattest voor een:</label>
                 <label class="radio-inline"><input type="radio" name="optradio" checked>Appartement</label>
                 <label class="radio-inline"><input type="radio" name="optradio" checked>Woning</label>
             </div>
             <div style="display: flex;">
-                <input type="text" name="address" placeholder="Straat" style="flex: 0.7;" required />
-                <input type="text" name="number" placeholder="Nummer" style="flex: 0.15;" required />
+                <input type="text" name="address" placeholder="Straat" style="flex: 0.7; margin-right: 10px;" required />
+                <input type="text" name="number" placeholder="Nummer" style="flex: 0.15; margin-right: 10px;" required />
                 <input type="text" name="postbus" placeholder="Bus" style="flex: 0.15;" required />
             </div>
 
@@ -123,6 +124,13 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         margin-top: 20px;
         width: 30%;
         text-align: center;
-        /* for inner content alignment */
+    }
+    div.radio-options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.radio-options label {
+        margin-right: 10px;
     }
 </style>
