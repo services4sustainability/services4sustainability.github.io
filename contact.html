@@ -9,6 +9,8 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         <form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form" id="contactForm">
 
             <b>GEGEVENS VAN DE OPDRACHTGEVER</b>
+            <br>
+
             <div class="halves">
                 <div>
                     <label for="name">Voornaam</label>
@@ -37,6 +39,8 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <br>
             <br>
             <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
+            <br>
+
             <div class="radio-options">
                 <label>Ik wens een asbsestattest voor een:</label><br>
                 <label class="radio-inline"><input type="radio" name="optradio" checked>Appartement</label>
@@ -54,6 +58,31 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             </div>
             <br>
 
+            <div class="radio-options">
+                <label>Asbestattest voor:</label><br>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Verkoop / schenking / overdracht</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Codex welzijn op werk</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Vrijwillig</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Andere</label>
+            </div>
+            <br>
+
+            <div class="radio-options">
+                <label>Zijn er grondplannen van het pand?</label><br>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Ja</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Neen</label>
+            </div>
+            <br>
+
+            <div class="radio-options">
+                <label>Zijn er bijgebouwen >50m<sup>2</sup></label><br>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Ja</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Neen</label>
+            </div>
+            <br>
+            <textarea name="message" id="message" placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" required></textarea>
+            <br>
+
             <div class="halves">
                 <div>
                     <label for="straat">Straat</label>
@@ -67,8 +96,8 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             </div>
             <br>
 
-            <label for="message">Bericht</label>
-            <textarea name="message" id="message" placeholder="Hallo..." required></textarea>
+            <textarea name="message" id="message" placeholder="Heeft u nog andere vragen voor ons?" required></textarea>
+            <br>
 
             <div class="g-recaptcha center-div" data-sitekey="6LfIoTkpAAAAABtPn15hOMoKB5p-n6RQDevBs-RG"></div>
             <br>
@@ -139,12 +168,20 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     form.addEventListener("submit", handleSubmit)
 </script>
 <style>
-    div.radio-options {
-        display: flex;
-        justify-content: space-between;
-    }
+    .center-div {
+  margin: auto;
+  width: 50%; /* or any percentage or fixed value you want */
+  text-align: center; /* for inner content alignment */
+}
+    .radio-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-    div.radio-options label {
-        margin-right: 10px;
-    }
+.radio-options .radio-inline {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
 </style>
