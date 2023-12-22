@@ -180,7 +180,7 @@ section {
 	flex-flow: wrap;
 	align-items: flex-start;
 
-	>div {
+	>div:not([type="radio"]) {
 		flex: 1 0 100%;
 	}
 
