@@ -8,7 +8,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     <div class="container">
         <form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form" id="contactForm">
 
-            <h3>GEGEVENS VAN DE OPDRACHTGEVER</h3>
+            <b>GEGEVENS VAN DE OPDRACHTGEVER</b>
             <div class="halves">
                 <div>
                     <label for="name">Voornaam</label>
@@ -31,23 +31,35 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
                     <input type="tel" name="nr" id="nr" placeholder="0412345678" required />
                 </div>
             </div>
-
-            <h3>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</h3>
+            
+            <br>
+            <b>GEGEVENS VAN DE EIGENDOM VOOR HET ASBESTATTEST</b>
             <div>
                 <label>Ik wens een asbsestattest voor een:</label>
-                <div>
-                    <input type="radio" id="option1" name="appartement" value="Appartement">
-                    <label for="option1">Option 1</label><br>
-                    <input type="radio" id="option2" name="woning" value="Woning">
-                    <label for="option2">Option 2</label><br>
-                    <input type="radio" id="option3" name="kantoor/comruimte" value="Kantoor / Commerciele ruimte">
-                    <label for="option3">Kantoor / Commerciele ruimte"</label>
-                    <input type="radio" id="option4" name="appartementsgebouw" value="Appartementsgebouw">
-                    <label for="option4">Appartementsgebouw</label>
-                    <input type="radio" id="option5" name="gem_delen" value="Gemeenschappelijke delen">
-                    <label for="option5">Gemeenschappelijke delen"</label>
-                    <input type="radio" id="option6" name="andere" value="Andere">
-                    <label for="option6">Andere"</label>
+                <div class="radio-options">
+                    <div>
+                        <input type="radio" id="option1" name="appartement" value="Appartement">
+                        <label for="option1">Appartement</label><br>
+                    <div>
+                        <input type="radio" id="option2" name="woning" value="Woning">
+                        <label for="option2">Woning</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="option3" name="kantoor/comruimte" value="Kantoor / Commerciele ruimte">
+                        <label for="option3">Kantoor / Commerciele ruimte"</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="option4" name="appartementsgebouw" value="Appartementsgebouw">
+                        <label for="option4">Appartementsgebouw</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="option5" name="gem_delen" value="Gemeenschappelijke delen">
+                        <label for="option5">Gemeenschappelijke delen"</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="option6" name="andere" value="Andere">
+                        <label for="option6">Andere"</label>
+                    </div>
                 </div>
             </div>
 
@@ -128,5 +140,14 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
   margin-top: 20px;
   width: 30%;
   text-align: center; /* for inner content alignment */
+}
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* adjust as needed */
+}
+
+.radio-options div {
+  margin-right: 10px; /* adjust as needed */
 }
 </style>
