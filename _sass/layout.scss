@@ -178,7 +178,7 @@ section {
 .halves {
 	display: flex;
 	flex-flow: wrap;
-	align-items: center;
+	align-items: flex-start;
 
 	>div {
 		flex: 1 0 100%;
