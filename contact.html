@@ -45,44 +45,45 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
             <div class="radio-options">
                 <label>Ik wens een asbsestattest voor een:</label><br>
-                <label class="radio-inline"><input type="radio" name="voor" checked>Appartement</label>
-                <label class="radio-inline"><input type="radio" name="voor" checked>Woning</label>
+                <label class="radio-inline"><input type="radio" name="voor">Appartement</label>
+                <label class="radio-inline"><input type="radio" name="voor">Woning</label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Totale vloeroppervlakte:</label><br>
-                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>0-250m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>250-350m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>350-500m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte" checked>meer dan
+                <label class="radio-inline"><input type="radio" name="oppervlakte">0-250m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte">250-350m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte">350-500m<sup>2</sup></label>
+                <label class="radio-inline"><input type="radio" name="oppervlakte">meer dan
                     500m<sup>2</sup></label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Asbestattest voor:</label><br>
-                <label class="radio-inline"><input type="radio" name="doel" checked>Verkoop / schenking / overdracht</label>
-                <label class="radio-inline"><input type="radio" name="doel" checked>Codex welzijn op werk</label>
-                <label class="radio-inline"><input type="radio" name="doel" checked>Vrijwillig</label>
-                <label class="radio-inline"><input type="radio" name="doel" checked>Andere</label>
+                <label class="radio-inline"><input type="radio" name="doel">Verkoop / schenking / overdracht</label>
+                <label class="radio-inline"><input type="radio" name="doel">Codex welzijn op werk</label>
+                <label class="radio-inline"><input type="radio" name="doel">Vrijwillig</label>
+                <label class="radio-inline"><input type="radio" name="doel">Andere</label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Zijn er grondplannen van het pand?</label><br>
-                <label class="radio-inline"><input type="radio" name="plannen" checked>Ja</label>
-                <label class="radio-inline"><input type="radio" name="plannen" checked>Neen</label>
+                <label class="radio-inline"><input type="radio" name="plannen">Ja</label>
+                <label class="radio-inline"><input type="radio" name="plannen">Neen</label>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Zijn er bijgebouwen >50m<sup>2</sup>?</label><br>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen" checked>Ja</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen" checked>Neen</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen" id="jaOption">Ja</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen">Neen</label>
             </div>
             <br>
-            <textarea name="message" id="message" placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" required></textarea>
+            <textarea name="message" id="message"
+                placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" required></textarea>
             <br>
 
             <div class="halves">
@@ -133,6 +134,14 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 </section>
 
 <script type="text/javascript">
+
+    document.getElementById('jaOption').addEventListener('change', function () {
+        if (this.checked) {
+            document.getElementById('message').style.display = 'block';
+        } else {
+            document.getElementById('message').style.display = 'none';
+        }
+    });
     window.onload = function () {
         var el = document.getElementById('g-recaptcha-response');
         if (el) {
@@ -171,13 +180,20 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 </script>
 <style>
     .center-div {
-  margin: auto;
-  width: 50%; /* or any percentage or fixed value you want */
-  text-align: center; /* for inner content alignment */
-}
-.radio-options .radio-inline {
-  display: flex;
-  align-items: left;
-  margin-right: 10px;
-}
+        margin: auto;
+        width: 50%;
+        /* or any percentage or fixed value you want */
+        text-align: center;
+        /* for inner content alignment */
+    }
+
+    .radio-options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .radio-options .radio-inline {
+        display: flex;
+        align-items: center;
+    }
 </style>
