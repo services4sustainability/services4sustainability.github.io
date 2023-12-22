@@ -44,36 +44,39 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <br>
 
             <div class="radio-options">
-                <label>Ik wens een asbsestattest voor een:</label><br>
-                <label class="radio-inline"><input type="radio" name="voor">Appartement</label>
-                <label class="radio-inline"><input type="radio" name="voor">Woning</label>
+            </div>
+            <br>
+            <div class="halves">
+                <div class="radio-options">
+                    <label>Type gebouw:</label><br>
+                    <label class="radio-inline">Appartement<input type="radio" name="voor"></label>
+                    <label class="radio-inline">Woning<input type="radio" name="voor"></label>
+                </div>
+
+                <div class="radio-options">
+                    <label>Asbestattest voor:</label><br>
+                    <label class="radio-inline"><input type="radio" name="doel">Verkoop / schenking / overdracht</label>
+                    <label class="radio-inline"><input type="radio" name="doel">Codex welzijn op werk</label>
+                    <label class="radio-inline"><input type="radio" name="doel">Vrijwillig</label>
+                    <label class="radio-inline"><input type="radio" name="doel">Andere</label>
+                </div>
             </div>
             <br>
 
-            <div class="radio-options">
-                <label>Totale vloeroppervlakte:</label><br>
-                <label class="radio-inline"><input type="radio" name="oppervlakte">0-250m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte">250-350m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte">350-500m<sup>2</sup></label>
-                <label class="radio-inline"><input type="radio" name="oppervlakte">meer dan
-                    500m<sup>2</sup></label>
-            </div>
-            <br>
-
-            <div class="radio-options">
-                <label>Asbestattest voor:</label><br>
-                <label class="radio-inline"><input type="radio" name="doel">Verkoop / schenking / overdracht</label>
-                <label class="radio-inline"><input type="radio" name="doel">Codex welzijn op werk</label>
-                <label class="radio-inline"><input type="radio" name="doel">Vrijwillig</label>
-                <label class="radio-inline"><input type="radio" name="doel">Andere</label>
-            </div>
-            <br>
-
-            <div class="radio-options">
-                <label>Zijn er grondplannen van het pand?</label><br>
-                <label class="radio-inline"><input type="radio" name="plannen">Ja</label>
-                <label class="radio-inline"><input type="radio" name="plannen">Neen</label>
-            </div>
+            <div class="halves">
+                <div class="radio-options">
+                    <label>Totale vloeroppervlakte:</label><br>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte">0-250m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte">250-350m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte">350-500m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte">meer dan
+                        500m<sup>2</sup></label>
+                </div>
+                <div class="radio-options">
+                    <label>Zijn er grondplannen van het pand?</label><br>
+                    <label class="radio-inline"><input type="radio" name="plannen">Ja</label>
+                    <label class="radio-inline"><input type="radio" name="plannen">Neen</label>
+                </div>
             <br>
 
             <div class="radio-options">
@@ -82,8 +85,10 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
                 <label class="radio-inline"><input type="radio" name="bijgebouwen" id="neeOption">Neen</label>
             </div>
             <br>
+
             <textarea name="message" id="bijgebouwen_bericht"
-                placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)" style="display: none;"></textarea>
+                placeholder="Indien van toepassing, beschrijf de bijgebouwen (loods, garage, ...)"
+                style="display: none;"></textarea>
             <br>
 
             <div class="halves">
@@ -188,5 +193,13 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         margin: auto;
         width: 30%;
         text-align: center;
+    }
+
+    textarea {
+        width: 300px;
+        /* Or any other value */
+        height: 150px;
+        /* Or any other value */
+        resize: none;
     }
 </style>
