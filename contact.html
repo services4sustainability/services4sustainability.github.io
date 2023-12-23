@@ -14,25 +14,25 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
             <div class="halves">
                 <div>
-                    <label for="name">Voornaam</label>
-                    <input type="text" name="first-name" id="first-name" placeholder="Voornaam" required />
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required />
                 </div>
 
                 <div>
-                    <label for="name">Achternaam</label>
-                    <input type="text" name="last-name" id="last-name" placeholder="Achternaam" required />
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" name="achternaam" id="achternaam" placeholder="Achternaam" required />
                 </div>
             </div>
             <br>
             <div class="halves">
                 <div>
-                    <label for="name">E-mailadres</label>
+                    <label for="email">E-mailadres</label>
                     <input type="email" name="email" id="email" placeholder="naam@gmail.be" required />
                 </div>
 
                 <div>
-                    <label for="name">Telefoonnummer</label>
-                    <input type="tel" name="nr" id="nr" placeholder="0412345678" required />
+                    <label for="tel">Telefoonnummer</label>
+                    <input type="tel" name="tel" id="tel" placeholder="0412345678" required />
                 </div>
             </div>
 
@@ -46,11 +46,29 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <div class="halves">
                 <div>
                     <label for="straat">Straat</label>
-                    <input type="street" name="straat" id="straat" placeholder="Straat" required />
+                    <input type="text" name="straat" id="straat" placeholder="Straat" required />
+                </div>
+                <div class="halves">
+                    <div>
+                        <label for="huisnummer">Nummer</label>
+                        <input type="text" name="huisnummer" id="huisnummer" placeholder="1" required />
+                    </div>
+                    <div>
+                        <label for="bus">Bus</label>
+                        <input type="text" name="bus" id="bus" placeholder="A" required />
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="halves">
+                <div>
+                    <label for="gemeente">Gemeente</label>
+                    <input type="text" name="gemeente" id="gemeente" placeholder="Gemeente" required />
                 </div>
                 <div>
-                    <label for="name">Nr. + Bus</label>
-                    <input type="nr" name="huisnr" id="huisnr" placeholder="1B" required />
+                    <label for="postcode">Postcode</label>
+                    <input type="text" name="postcode" id="postcode" placeholder="Postcode" required />
                 </div>
             </div>
             <br>
@@ -58,15 +76,15 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <div class="halves">
                 <div class="radio-options">
                     <label>Type gebouw:</label>
-                    <label class="radio-inline"><input type="radio" name="voor">Appartement</label>
-                    <label class="radio-inline"><input type="radio" name="voor">Woning</label>
+                    <label class="radio-inline"><input type="radio" name="type gebouw woning">Appartement</label>
+                    <label class="radio-inline"><input type="radio" name="type gebouw appartement">Woning</label>
                 </div>
                 <div class="radio-options">
                     <label>Asbestattest voor:</label>
-                    <label class="radio-inline"><input type="radio" name="doel">Verkoop / schenking / overdracht</label>
-                    <label class="radio-inline"><input type="radio" name="doel">Codex welzijn op werk</label>
-                    <label class="radio-inline"><input type="radio" name="doel">Vrijwillig</label>
-                    <label class="radio-inline"><input type="radio" name="doel">Andere</label>
+                    <label class="radio-inline"><input type="radio" name="doel verkoop/schenking/overdracht">Verkoop / schenking / overdracht</label>
+                    <label class="radio-inline"><input type="radio" name="doel codex welzijn op werk">Codex welzijn op werk</label>
+                    <label class="radio-inline"><input type="radio" name="doel vrijwillig">Vrijwillig</label>
+                    <label class="radio-inline"><input type="radio" name="doel andere">Andere</label>
                 </div>
             </div>
             <br>
@@ -74,32 +92,32 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <div class="halves">
                 <div class="radio-options">
                     <label>Totale vloeroppervlakte:</label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte">0-250m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte">250-350m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte">350-500m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte">meer dan
+                    <label class="radio-inline"><input type="radio" name="oppervlakte 0-200">0-250m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte 250-350">250-350m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte 350-500">350-500m<sup>2</sup></label>
+                    <label class="radio-inline"><input type="radio" name="oppervlakte 500+">meer dan
                         500m<sup>2</sup></label>
                 </div>
                 <div class="radio-options">
                     <label>Zijn er grondplannen van het pand?</label>
-                    <label class="radio-inline"><input type="radio" name="plannen">Ja</label>
-                    <label class="radio-inline"><input type="radio" name="plannen">Neen</label>
+                    <label class="radio-inline"><input type="radio" name="plannen ja">Ja</label>
+                    <label class="radio-inline"><input type="radio" name="plannen neen">Neen</label>
                 </div>
             </div>
             <br>
 
             <div class="radio-options">
                 <label>Zijn er bijgebouwen >50m<sup>2</sup>?</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen" id="jaOption">Ja</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen" id="neeOption">Neen</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen ja" id="jaOption">Ja</label>
+                <label class="radio-inline"><input type="radio" name="bijgebouwen neen" id="neeOption">Neen</label>
             </div>
             <br>
 
-            <textarea name="message" id="bijgebouwen_bericht"
+            <textarea name="bijgebouwen bericht" id="bijgebouwen_bericht"
                 placeholder="Beschrijf de bijgebouwen (loods, garage, ...)" style="display: none;"></textarea>
             <br>
 
-            <textarea name="message" id="message" placeholder="Heeft u nog andere vragen voor ons?" required></textarea>
+            <textarea name="bericht" id="bericht" placeholder="Heeft u nog andere vragen voor ons?" required></textarea>
             <br>
 
             <div class="g-recaptcha center-div" data-sitekey="6LfIoTkpAAAAABtPn15hOMoKB5p-n6RQDevBs-RG"></div>
