@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-29T16:59:32.194Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="TDE4OcUKh4f7usHD6adP" version="22.1.16" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-29T18:00:43.837Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="BolTJZS6t3fgMEEgsUCL" version="22.1.16" type="device">
   <diagram name="Page-1" id="cyB94u8rCYhhM9mJcpZE">
-    <mxGraphModel dx="4780" dy="2597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4097" dy="2226" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry x="160" y="40" width="480" height="480" as="geometry" />
         </mxCell>
         <mxCell id="D3e0mnQvNd0L983-IUPQ-3" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 200px;&quot;&gt;Services for Sustainability&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#6c90dc;fontSize=68;fontFamily=arial;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Darial;" parent="1" vertex="1">
-          <mxGeometry x="640" y="260" width="2570" height="250" as="geometry" />
+          <mxGeometry x="630" y="60" width="2570" height="250" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
