@@ -177,10 +177,7 @@ section {
 
 .logo {
     width: 400px;
-}
-
-@media #{$mid-point} {
-    .logo {
+    @media #{$mid-point} {
         width: 200px;
     }
 }
