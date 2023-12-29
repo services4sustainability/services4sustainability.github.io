@@ -176,9 +176,10 @@ section {
 }
 
 .logo {
-    width: 400px;
+    width: 300px;
+
     @media #{$mid-point} {
-        width: 200px;
+        width: 20px;
     }
 }
 
