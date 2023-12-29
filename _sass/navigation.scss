@@ -108,13 +108,10 @@ nav {
 		}
 	}
 
-	a:active {
+	a.active {
 		color: $brand-color;
-
-		@media #{$mid-point} {
-			border-bottom: 2px solid $brand-color;
-			display: block;
-			padding: 10px;
-		}
+		border-bottom: 2px solid $brand-color;
+		display: block;
+		padding: 10px;
 	}
 }

@@ -5,8 +5,10 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 ---
 
 <section class="grey">
-	<a class="button alt" href="{{ site.baseurl }}/contact-asbest/"><b>asbestattest</b></a>
-	<a class="button alt" href="{{ site.baseurl }}/contact-schatting/"><b>schatting</b></a>
+    <div class="button-container">
+        <a class="button alt" href="{{ site.baseurl }}/contact-asbest/"><b>asbestattest</b></a>
+        <a class="button alt" href="{{ site.baseurl }}/contact-schatting/"><b>schatting</b></a>
+    </div>
 </section>
 
 <section class="white">
@@ -52,5 +54,15 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-container .button {
+        flex: 1;
+        text-align: center;
     }
 </style>
