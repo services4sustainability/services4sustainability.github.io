@@ -108,8 +108,8 @@ nav {
         }
     }
 
-    @media (min-width: 768px) {
-        a.active {
+    a.active {
+        @media #{$mid-point} {
             color: $brand-color;
             border-bottom: 2px solid $brand-color;
             display: block;
