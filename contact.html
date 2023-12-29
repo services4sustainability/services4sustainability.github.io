@@ -6,124 +6,15 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
 <section class="grey">
     <div class="container">
-        <form action="https://formspree.io/f/xpzgdywk" method="post" class="contact-form" id="contactForm">
-
-            <b>GEGEVENS VAN DE OPDRACHTGEVER</b>
-            <br>
-            <br>
-
-            <div class="halves">
-                <div>
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required />
-                </div>
-
-                <div>
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" name="achternaam" id="achternaam" placeholder="Achternaam" required />
-                </div>
-            </div>
-            <br>
-            <div class="halves">
-                <div>
-                    <label for="email">E-mailadres</label>
-                    <input type="email" name="email" id="email" placeholder="naam@gmail.be" required />
-                </div>
-
-                <div>
-                    <label for="tel">Telefoonnummer</label>
-                    <input type="tel" name="tel" id="tel" placeholder="0412345678" required />
-                </div>
+        <div class="halves">
+            <div>
+				<p style="font-size: 16px"><a class="button alt" href="{{ site.baseurl }}/contact-asbest/"><b>asbestattest</b></a></p>
             </div>
 
-            <br>
-            <br>
-            <br>
-            <b>GEGEVENS VAN DE EIGENDOM</b>
-            <br>
-            <br>
-
-            <div class="halves">
-                <div>
-                    <label for="straat">Straat</label>
-                    <input type="text" name="straat" id="straat" placeholder="Straat" required />
-                </div>
-                <div class="halves">
-                    <div>
-                        <label for="huisnummer">Nummer</label>
-                        <input type="text" name="huisnummer" id="huisnummer" placeholder="1" required />
-                    </div>
-                    <div>
-                        <label for="bus">Bus</label>
-                        <input type="text" name="bus" id="bus" placeholder="A"/>
-                    </div>
-                </div>
+            <div>
+				<p style="font-size: 16px"><a class="button alt" href="{{ site.baseurl }}/contact-schatting/"><b>schatting</b></a></p>
             </div>
-            <br>
-
-            <div class="halves">
-                <div>
-                    <label for="gemeente">Gemeente</label>
-                    <input type="text" name="gemeente" id="gemeente" placeholder="Gemeente" required />
-                </div>
-                <div>
-                    <label for="postcode">Postcode</label>
-                    <input type="text" name="postcode" id="postcode" placeholder="Postcode" required />
-                </div>
-            </div>
-            <br>
-
-            <div class="halves">
-                <div class="radio-options">
-                    <label>Type gebouw:</label>
-                    <label class="radio-inline"><input type="radio" name="type gebouw woning">Appartement</label>
-                    <label class="radio-inline"><input type="radio" name="type gebouw appartement">Woning</label>
-                </div>
-                <div class="radio-options">
-                    <label>Asbestattest voor:</label>
-                    <label class="radio-inline"><input type="radio" name="doel verkoop/schenking/overdracht">Verkoop / schenking / overdracht</label>
-                    <label class="radio-inline"><input type="radio" name="doel codex welzijn op werk">Codex welzijn op werk</label>
-                    <label class="radio-inline"><input type="radio" name="doel vrijwillig">Vrijwillig</label>
-                    <label class="radio-inline"><input type="radio" name="doel andere">Andere</label>
-                </div>
-            </div>
-            <br>
-
-            <div class="halves">
-                <div class="radio-options">
-                    <label>Totale vloeroppervlakte:</label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte 0-200">0-250m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte 250-350">250-350m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte 350-500">350-500m<sup>2</sup></label>
-                    <label class="radio-inline"><input type="radio" name="oppervlakte 500+">meer dan
-                        500m<sup>2</sup></label>
-                </div>
-                <div class="radio-options">
-                    <label>Zijn er grondplannen van het pand?</label>
-                    <label class="radio-inline"><input type="radio" name="plannen ja">Ja</label>
-                    <label class="radio-inline"><input type="radio" name="plannen neen">Neen</label>
-                </div>
-            </div>
-            <br>
-
-            <div class="radio-options">
-                <label>Zijn er bijgebouwen >50m<sup>2</sup>?</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen ja" id="jaOption">Ja</label>
-                <label class="radio-inline"><input type="radio" name="bijgebouwen neen" id="neeOption">Neen</label>
-            </div>
-            <br>
-
-            <textarea name="bijgebouwen bericht" id="bijgebouwen_bericht"
-                placeholder="Beschrijf de bijgebouwen (loods, garage, ...)" style="display: none;"></textarea>
-            <br>
-
-            <textarea name="bericht" id="bericht" placeholder="Heeft u nog andere vragen voor ons?" required></textarea>
-            <br>
-
-            <div class="g-recaptcha center-div" data-sitekey="6LfIoTkpAAAAABtPn15hOMoKB5p-n6RQDevBs-RG"></div>
-            <br>
-            <input type="submit" value="Verstuur" />
-        </form>
+        </div>
     </div>
 </section>
 
@@ -150,57 +41,6 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         </div>
     </div>
 </section>
-
-<script type="text/javascript">
-
-    document.getElementById('jaOption').addEventListener('change', function () {
-        if (this.checked) {
-            document.getElementById('bijgebouwen_bericht').style.display = 'block';
-        } else {
-            document.getElementById('bijgebouwen_bericht').style.display = 'none';
-        }
-    });
-    document.getElementById('neeOption').addEventListener('change', function () {
-        if (this.checked) {
-            document.getElementById('bijgebouwen_bericht').style.display = 'none';
-        }
-    });
-    window.onload = function () {
-        var el = document.getElementById('g-recaptcha-response');
-        if (el) {
-            el.setAttribute('required', 'required');
-        }
-    }
-
-    var form = document.getElementById("contactForm");
-    async function handleSubmit(event) {
-        event.preventDefault();
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                window.location.href = "{{ site.baseurl }}/contact-success/";
-            } else {
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        console.log(data["errors"].map(error => error["message"]).join(", "))
-                    } else {
-                        console.log("Oops! There was a problem submitting your form")
-                    }
-                    window.location.href = "{{ site.baseurl }}/contact-error/";
-                })
-            }
-        }).catch(error => {
-            console.log("Oops! There was a problem submitting your form")
-        });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
 <style>
     .center-div {
         display: flex;
