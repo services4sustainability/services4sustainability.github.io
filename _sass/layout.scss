@@ -176,10 +176,10 @@ section {
 }
 
 .logo {
-    width: 300px;
+    width: 150px;
 
     @media #{$mid-point} {
-        width: 20px;
+        width: 300px;
     }
 }
 
