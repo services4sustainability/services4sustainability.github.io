@@ -306,6 +306,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+
     @media #{$mid-point} {
         flex-direction: column;
     }
@@ -315,8 +316,22 @@ section {
     flex: 1;
     padding: 10px;
     text-align: center;
+
     @media #{$mid-point} {
         flex: none;
         width: 100%;
+    }
+}
+
+.bottom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+
+    p,
+    a {
+        font-size: 14px;
     }
 }
