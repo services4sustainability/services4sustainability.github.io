@@ -306,20 +306,16 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @media #{$mid-point} {
+        flex-direction: column;
+    }
 }
 
 .column {
     flex: 1;
     padding: 10px;
     text-align: center;
-}
-
-@media #{$mid-point} {
-    .three-columns {
-        flex-direction: column;
-    }
-
-    .column {
+    @media #{$mid-point} {
         flex: none;
         width: 100%;
     }
