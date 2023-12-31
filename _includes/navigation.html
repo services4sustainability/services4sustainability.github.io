@@ -7,7 +7,7 @@
         {% assign class = class | append: " highlight" %}
         {% endif %}
 
-        {% if link.link contains page.url %}
+        {% if page.url contains link.link %}
         {% assign class = class | append: " active" %}
         {% endif %}
 
