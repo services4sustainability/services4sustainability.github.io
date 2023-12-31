@@ -40,7 +40,7 @@
 
     <footer>
         <div class="container halves">
-            <div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; font-size: 12px;">
+            <div class="bottom-info">
                 <p><a href="mailto:{{ site.data.company.contact_email_address }}">{{
                         site.data.company.contact_email_address }}</a></p>
                 <p><a href="tel:{{ site.data.company.phone }}">+32 474 48 81 72</a></p>
@@ -58,6 +58,19 @@
             return false;
         };
     </script>
+    <style>
+        bottom-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+            p,
+            a {
+                font-size: 12px;
+            }
+        }
+    </style>
 </body>
 
 </html>
