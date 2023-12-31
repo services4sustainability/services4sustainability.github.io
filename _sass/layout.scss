@@ -302,11 +302,25 @@ section {
     text-align: center;
 }
 
-.patterned {
-    background: #222 url($pattern);
+.three-columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    &,
-    p {
-        color: #fefefe;
+.column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+@media #{$mid-point} {
+    .three-columns {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: none;
+        width: 100%;
     }
 }

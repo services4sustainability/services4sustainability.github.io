@@ -78,8 +78,12 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             <div class="halves">
                 <div class="radio-options">
                     <label>Type pand:</label>
-                    <label class="radio-inline"><input type="radio" name="type gebouw woning">Appartement</label>
-                    <label class="radio-inline"><input type="radio" name="type gebouw appartement">Woning</label>
+                    <label class="radio-inline"><input type="radio" name="type gebouw"
+                            value="Eengezinswoning">Ééngezinswoning</label>
+                    <label class="radio-inline"><input type="radio" name="type gebouw"
+                            value="Appartement/studio">Appartement/studio</label>
+                    <label class="radio-inline"><input type="radio" name="type gebouw"
+                            value="Bouwgrond voor eengezinswoning">Bouwground voor ééngezinswoning</label>
                 </div>
                 <div class="radio-options">
                     <label>Asbestattest voor:</label>
@@ -231,16 +235,5 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-    }
-
-    .three-columns {
-        display: flex;
-        justify-content: center;
-    }
-
-    .column {
-        flex: 1;
-        padding: 10px;
-        text-align: center;
     }
 </style>
