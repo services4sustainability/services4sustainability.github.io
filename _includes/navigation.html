@@ -19,7 +19,7 @@
                 <li><a href="#option2">Option 2</a></li>
             </ul>
         </li>
-        {% else }
+        {% else %}
         <li><a href="{{ site.baseurl }}{{ link.link }}" class="{{ class }}" {% if link.new_window %}target="_blank" {%
                 endif %}>{{ link.name }}</a></li>
         {% endif %}
