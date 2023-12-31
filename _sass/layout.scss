@@ -165,13 +165,13 @@ section {
 
     &:hover {
         background: rgba(255, 255, 255, 0.3);
-        color: $brand-color;
+        color: $html-background-color;
     }
 
     &:active {
         opacity: 1;
         background: rgba(255, 255, 255, 0.1);
-        color: $brand-color;
+        color: $html-background-color;
         transform: translateY(1px);
     }
 }
