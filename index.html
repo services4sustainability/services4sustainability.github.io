@@ -57,12 +57,13 @@ title:
             </div>
             <div class="logo-container">
                 <div class="row right-aligned-row">
-                    <a href="https://www.vlaanderen.be/informatie-voor-erkende-schatters-experten" target="_blank">
+                    <a class="right-aligned-link"
+                        href="https://www.vlaanderen.be/informatie-voor-erkende-schatters-experten" target="_blank">
                         <img src="{{ site.baseurl }}/images/label.svg" style="width: 60%;">
                     </a>
                 </div>
                 <div class="row right-aligned-row">
-                    <p style="font-size: 16px;"><a class="button alt" style="width: 50%;"
+                    <p style="font-size: 16px;"><a class="button alt" style="width: 60%;"
                             href="{{ site.baseurl }}/contact-schatting/"><b>
                                 offerte schatting</b></a></p>
                 </div>
@@ -84,6 +85,12 @@ title:
 
     .centered-row {
         justify-content: center;
+    }
+
+    .right-aligned-link {
+        display: block;
+        width: 100%;
+        text-align: right;
     }
 
     .right-aligned-row {
