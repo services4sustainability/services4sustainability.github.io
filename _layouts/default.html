@@ -3,72 +3,72 @@
 <html lang="nl">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="googlebot" content="notranslate">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX6CC0L12P"></script>
-  <script src="https://www.google.com/recaptcha/api.js?hl=nl" async defer></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="googlebot" content="notranslate">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX6CC0L12P"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=nl" async defer></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-NX6CC0L12P');
-  </script>
+        gtag('config', 'G-NX6CC0L12P');
+    </script>
 
-  {% seo %}
-  {% feed_meta %}
+    {% seo %}
+    {% feed_meta %}
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-        <a href="{{ site.baseurl }}/"><img class="logo" src="{{ site.baseurl }}/images/logo.svg" alt="logo"></a>
-      {% include navigation.html %}
-    </div>
-  </header>
-  {{ content }}
+    <header>
+        <div class="container">
+            <a href="{{ site.baseurl }}/"><img class="logo" src="{{ site.baseurl }}/images/logo.svg" alt="logo"></a>
+            {% include navigation.html %}
+        </div>
+    </header>
+    {{ content }}
 
-  <footer>
-    <div class="container">
-      <div class="footer-columns">
-        <ul class="footer-links">
-            <a href="https://asbest-certificaat.be/" target="_blank"><img
-                src="https://asbest-certificaat.be/wp-content/uploads/2022/10/cropped-Logo_SKH_M_Groen_SKH-SHR22_nl.png"
-                width="min-height: 160px;"></a>
-        </ul>
-        <ul class="footer-links">
-            <a href="https://www.vlaanderen.be/informatie-voor-erkende-schatters-experten" target="_blank"><img
-                src="{{ site.baseurl }}/images/label.svg"
-                style="min-height: 160px;"></a>
-        </ul>
-        <ul class="footer-links">
-          <img src="{{ site.baseurl }}/images/watermark.svg" width="100%">
-        </ul>
-      </div>
-    </div>
+    <footer>
+        <div class="container">
+            <div class="centered-images">
+                <a href="https://asbest-certificaat.be/" target="_blank"><img
+                        src="https://asbest-certificaat.be/wp-content/uploads/2022/10/cropped-Logo_SKH_M_Groen_SKH-SHR22_nl.png"
+                        width="min-height: 160px;"></a>
+                <a href="https://www.vlaanderen.be/informatie-voor-erkende-schatters-experten" target="_blank"><img
+                        src="{{ site.baseurl }}/images/label.svg" style="min-height: 160px;"></a>
+                <img src="{{ site.baseurl }}/images/watermark.svg" width="200px">
+            </div>
+        </div>
 
-    <div class="legal-line">
-      <p class="container">
-        &copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
-      </p>
-    </div>
-  </footer>
-  <script>
-    document.getElementById("open-nav").onclick = function () {
-      document.body.classList.toggle("nav-open");
-      return false;
-    };
-  </script>
+        <div class="legal-line">
+            <p class="container">
+                &copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
+            </p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("open-nav").onclick = function () {
+            document.body.classList.toggle("nav-open");
+            return false;
+        };
+    </script>
+    <style>
+        .centered-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </body>
 
 </html>
