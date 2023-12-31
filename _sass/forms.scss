@@ -1,6 +1,7 @@
 input[type=submit] {
 	color: $html-background-color;
     text-decoration: none !important;
+    font-weight: bold;
 	padding: 20px 30px;
 	border-radius: 3px;
 	transition: 0.2s ease-in-out;
