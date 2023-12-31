@@ -134,19 +134,6 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 </section>
 
 <script type="text/javascript">
-
-    document.getElementById('jaOption').addEventListener('change', function () {
-        if (this.checked) {
-            document.getElementById('bijgebouwen_bericht').style.display = 'block';
-        } else {
-            document.getElementById('bijgebouwen_bericht').style.display = 'none';
-        }
-    });
-    document.getElementById('neeOption').addEventListener('change', function () {
-        if (this.checked) {
-            document.getElementById('bijgebouwen_bericht').style.display = 'none';
-        }
-    });
     window.onload = function () {
         var el = document.getElementById('g-recaptcha-response');
         if (el) {
