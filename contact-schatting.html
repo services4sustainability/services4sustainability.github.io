@@ -159,77 +159,77 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
         </div>
     </div>
-    /section>
+</section>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        document.getElementById('jaOption').addEventListener('change', function () {
-            if (this.checked) {
-                document.getElementById('bijgebouwen_bericht').style.display = 'block';
+    document.getElementById('jaOption').addEventListener('change', function () {
+        if (this.checked) {
+            document.getElementById('bijgebouwen_bericht').style.display = 'block';
+        } else {
+            document.getElementById('bijgebouwen_bericht').style.display = 'none';
+        }
+    });
+    document.getElementById('neeOption').addEventListener('change', function () {
+        if (this.checked) {
+            document.getElementById('bijgebouwen_bericht').style.display = 'none';
+        }
+    });
+    window.onload = function () {
+        var el = document.getElementById('g-recaptcha-response');
+        if (el) {
+            el.setAttribute('required', 'required');
+        }
+    }
+
+    var form = document.getElementById("contactForm");
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = "{{ site.baseurl }}/contact-success/";
             } else {
-                document.getElementById('bijgebouwen_bericht').style.display = 'none';
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        console.log(data["errors"].map(error => error["message"]).join(", "))
+                    } else {
+                        console.log("Oops! There was a problem submitting your form")
+                    }
+                    window.location.href = "{{ site.baseurl }}/contact-error/";
+                })
             }
+        }).catch(error => {
+            console.log("Oops! There was a problem submitting your form")
         });
-        document.getElementById('neeOption').addEventListener('change', function () {
-            if (this.checked) {
-                document.getElementById('bijgebouwen_bericht').style.display = 'none';
-            }
-        });
-        window.onload = function () {
-            var el = document.getElementById('g-recaptcha-response');
-            if (el) {
-                el.setAttribute('required', 'required');
-            }
-        }
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+<style>
+    .center-div {
+        display: flex;
+        justify-content: center;
+    }
 
-        var form = document.getElementById("contactForm");
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = "{{ site.baseurl }}/contact-success/";
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            console.log(data["errors"].map(error => error["message"]).join(", "))
-                        } else {
-                            console.log("Oops! There was a problem submitting your form")
-                        }
-                        window.location.href = "{{ site.baseurl }}/contact-error/";
-                    })
-                }
-            }).catch(error => {
-                console.log("Oops! There was a problem submitting your form")
-            });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
-    <style>
-        .center-div {
-            display: flex;
-            justify-content: center;
-        }
+    textarea {
+        height: 150px;
+        resize: none;
+    }
 
-        textarea {
-            height: 150px;
-            resize: none;
-        }
+    .halvestop {
+        display: flex;
+        flex: 1;
+    }
 
-        .halvestop {
-            display: flex;
-            flex: 1;
-        }
-
-        .radio-options {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-    </style>
+    .radio-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+</style>
