@@ -305,9 +305,9 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     @media #{$mid-point} {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
