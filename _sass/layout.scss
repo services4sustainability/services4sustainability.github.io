@@ -316,6 +316,9 @@ section {
     flex: 1;
     padding: 10px;
     text-align: center;
+    @media #{$mid-point} {
+        flex: 1;
+    }
 }
 
 .bottom-info {
