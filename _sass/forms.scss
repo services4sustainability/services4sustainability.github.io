@@ -4,20 +4,20 @@ input[type=submit] {
 	padding: 20px 30px;
 	border-radius: 3px;
 	transition: 0.2s ease-in-out;
-	border: 1px solid $brand-color;
+	border: 3px solid $html-background-color;
 	background: #fff;
 	cursor: pointer;
 }
 
 input[type=submit]:hover {
 	background: #e3e3e3;
-	color: $brand-color;
+	color: $html-background-color;
 }
 
 input[type=submit]:active {
 	opacity: 1;
 	background: #e3e3e3;
-	color: $brand-color;
+	color: $html-background-color;
 	transform: translateY(1px);
 }
 
