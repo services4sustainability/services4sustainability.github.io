@@ -45,7 +45,7 @@
                         site.data.company.contact_email_address }}</a></p>
                 <p><a href="tel:{{ site.data.company.phone }}">+32 474 48 81 72</a></p>
                 <p>BE 0600 912 030</p>
-                &copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
+                <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}</p>
             </div>
             <div style="display: flex; justify-content: right; align-items: right;">
                 <img src="{{ site.baseurl }}/images/watermark.svg" width="200px">
@@ -64,10 +64,11 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
+            height: 100%;
 
             p,
             a {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     </style>
