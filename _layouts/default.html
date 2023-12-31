@@ -39,8 +39,8 @@
     {{ content }}
 
     <footer>
-        <div class="container halbes">
-            <div>
+        <div class="container halves">
+            <div style="display: flex; justify-content: left; align-items: left;">
                 <p><a href="mailto:{{ site.data.company.contact_email_address }}">{{
                         site.data.company.contact_email_address
                         }}
@@ -48,7 +48,7 @@
                     </a></p>
                 <p>BE 0600 912 030</p>
             </div>
-            <div class="centered-images">
+            <div style="display: flex; justify-content: right; align-items: right;">
                 <img src="{{ site.baseurl }}/images/watermark.svg" width="200px">
             </div>
         </div>
@@ -65,13 +65,6 @@
             return false;
         };
     </script>
-    <style>
-        .centered-images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 </body>
 
 </html>
