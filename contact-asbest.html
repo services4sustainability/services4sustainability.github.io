@@ -189,8 +189,8 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     var form = document.getElementById("contactForm");
     async function handleSubmit(event) {
         event.preventDefault();
-        print($('#g-recaptcha-response').val())
-        if ($('#g-recaptcha-response').val() === '') {
+        print(grecaptcha.getResponse())
+        if (grecaptcha.getResponse() === '') {
             document.getElementById('error-captcha').innerText = 'Vul alstublieft de captcha in!';
         } else {
             var data = new FormData(event.target);
