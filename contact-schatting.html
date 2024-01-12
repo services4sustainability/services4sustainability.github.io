@@ -144,6 +144,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
             }
         });
     };
+    window.onloadCallback = onloadCallback;
     var form = document.getElementById("contactForm");
     async function handleSubmit(event) {
         event.preventDefault();
@@ -177,7 +178,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
     }
     form.addEventListener("submit", handleSubmit)
 </script>
-<script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+<script async src="https://www.google.com/recaptcha/api.js?render=explicit&onload=onloadCallback"></script>
 <style>
     .center-div {
         display: flex;
