@@ -137,7 +137,7 @@ subtitle: Vraag een vrijblijvende offerte aan of bel ons.
 
 <script type="text/javascript">
     function onloadCallback() {
-        recaptcha.render('captcha-element', {
+        grecaptcha.render('captcha-element', {
             'sitekey': '6LfIoTkpAAAAABtPn15hOMoKB5p-n6RQDevBs-RG',
             'callback': function () {
                 document.getElementById('error-captcha').innerText = '';
